@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  location: MyString
+  phone_number: MyString
+  time_monday: 2019-03-12 13:17:10
+  time_tuesday: 2019-03-12 13:17:10
+  time_wednesday: 2019-03-12 13:17:10
+  time_thursday: 2019-03-12 13:17:10
+  time_friday: 2019-03-12 13:17:10
+  time_saturday: 2019-03-12 13:17:10
+  time_sunday: 2019-03-12 13:17:10
+  description: MyString
+  photos: MyString
+  has_free_wifi: false
+  address: MyString
+
+two:
+  title: MyString
+  location: MyString
+  phone_number: MyString
+  time_monday: 2019-03-12 13:17:10
+  time_tuesday: 2019-03-12 13:17:10
+  time_wednesday: 2019-03-12 13:17:10
+  time_thursday: 2019-03-12 13:17:10
+  time_friday: 2019-03-12 13:17:10
+  time_saturday: 2019-03-12 13:17:10
+  time_sunday: 2019-03-12 13:17:10
+  description: MyString
+  photos: MyString
+  has_free_wifi: false
+  address: MyString

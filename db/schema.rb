@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190309100140) do
+ActiveRecord::Schema.define(version: 20190312111710) do
+
+  create_table "catalogs", force: :cascade do |t|
+    t.string "title"
+    t.string "location"
+    t.string "phone_number"
+    t.time "open_time_monday"
+    t.time "open_time_tuesday"
+    t.time "open_time_wednesday"
+    t.time "open_time_thursday"
+    t.time "open_time_friday"
+    t.time "open_time_saturday"
+    t.time "open_time_sunday"
+    t.time "close_time_monday"
+    t.time "close_time_tuesday"
+    t.time "close_time_wednesday"
+    t.time "close_time_thursday"
+    t.time "close_time_friday"
+    t.time "close_time_saturday"
+    t.time "close_time_sunday"
+    t.string "description"
+    t.string "photos"
+    t.boolean "has_free_wifi"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,12 +49,12 @@ ActiveRecord::Schema.define(version: 20190309100140) do
     t.datetime "confirmation_sent_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "first_name"
-    t.string "last_name"
+    t.string "username"
     t.string "avatar"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
