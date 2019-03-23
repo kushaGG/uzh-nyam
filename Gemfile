@@ -38,6 +38,7 @@ gem 'devise'
 #user avatar, photos
 gem 'carrierwave', '~> 1.0'
 #admin panel
+gem 'activeadmin'
 
 
 group :development, :test do
