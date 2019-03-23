@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @catalog.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= link_to @catalog.location, @catalog.location %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @catalog.phone_number %>
+</p>
+
+<p>
+  <strong>Time monday:</strong>
+  <%= @catalog.open_time_monday.strftime("%H:%M") %> -
+  <%= @catalog.close_time_monday.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Time tuesday:</strong>
+  <%= @catalog.open_time_tuesday.strftime("%H:%M") %> -
+  <%= @catalog.close_time_tuesday.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Time wednesday:</strong>
+  <%= @catalog.open_time_wednesday.strftime("%H:%M") %> -
+  <%= @catalog.close_time_wednesday.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Time thursday:</strong>
+  <%= @catalog.open_time_thursday.strftime("%H:%M") %> -
+  <%= @catalog.close_time_thursday.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Time friday:</strong>
+  <%= @catalog.open_time_friday.strftime("%H:%M") %> -
+  <%= @catalog.close_time_friday.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Time saturday:</strong>
+  <%= @catalog.open_time_saturday.strftime("%H:%M") %> -
+  <%= @catalog.close_time_saturday.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Time sunday:</strong>
+  <%= @catalog.open_time_sunday.strftime("%H:%M") %> -
+  <%= @catalog.close_time_sunday.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @catalog.description %>
+</p>
+
+<p>
+  <strong>Photos:</strong> <br>
+  <% @catalog.photos.each do | photo | %>
+  		<%= image_tag(photo.url, size: "500x300")%>	<br> <br>
+  <% end %>
+</p>
+
+<p>
+  <strong>Has free wifi:</strong>
+  <%= @catalog.has_free_wifi %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @catalog.address %>
+</p>
+
+<%= link_to 'Edit', edit_catalog_path(@catalog) %> |
+<%= link_to 'Back', catalogs_path %>

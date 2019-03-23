@@ -1,0 +1,94 @@
+<%= form_with(model: catalog, local: true) do |form| %>
+  <% if catalog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(catalog.errors.count, "error") %> prohibited this catalog from being saved:</h2>
+
+      <ul>
+      <% catalog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :catalog_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :catalog_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :catalog_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_monday %>
+    <%= form.time_select :open_time_monday, {:default => {:hour => '8', :minute => '00'}} %> -
+    <%= form.time_select :close_time_monday, {:default => {:hour => '20', :minute => '00'}} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_tuesday %>
+    <%= form.time_select :open_time_tuesday, {:default => {:hour => '8', :minute => '00'}} %> -
+    <%= form.time_select :close_time_tuesday, {:default => {:hour => '20', :minute => '00'}} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_wednesday %>
+    <%= form.time_select :open_time_wednesday, {:default => {:hour => '8', :minute => '00'}} %> -
+    <%= form.time_select :close_time_wednesday, {:default => {:hour => '20', :minute => '00'}} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_thursday %>
+    <%= form.time_select :open_time_thursday, {:default => {:hour => '8', :minute => '00'}} %> -
+    <%= form.time_select :close_time_thursday, {:default => {:hour => '20', :minute => '00'}} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_friday %>
+    <%= form.time_select :open_time_friday, {:default => {:hour => '8', :minute => '00'}} %> -
+    <%= form.time_select :close_time_friday, {:default => {:hour => '20', :minute => '00'}} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_sanday %>
+    <%= form.time_select :open_time_saturday, {:default => {:hour => '8', :minute => '00'}} %> -
+    <%= form.time_select :close_time_saturday, {:default => {:hour => '20', :minute => '00'}} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_sunday %>
+    <%= form.time_select :open_time_sunday, {:default => {:hour => '8', :minute => '00'}} %> -
+    <%= form.time_select :close_time_sunday, {:default => {:hour => '20', :minute => '00'}} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :catalog_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photos %>
+    <%= form.file_field :photos, multiple: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_free_wifi %>
+    <%= form.check_box :has_free_wifi, id: :catalog_has_free_wifi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :catalog_address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
