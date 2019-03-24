@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
           authentication_keys: [:login]
 
+  validates :username, presence: true, length: 5..15, uniqueness: true, format: { without: /[!-\/\@\^\~\`\(\)\[\]\>\<\=]/ }
+
   mount_uploader :avatar, AvatarUploader
 
   attr_writer :login

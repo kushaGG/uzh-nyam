@@ -22,6 +22,7 @@ class CreateCatalogs < ActiveRecord::Migration[5.1]
       t.string :photos
       t.boolean :has_free_wifi
       t.string :address
+      t.integer :category_id
 
       t.timestamps
     end
