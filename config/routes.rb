@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'reviews/new'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :catalogs
+  resources :catalogs do
+    resources :reviews
+  end
   devise_for :users
   root 'pages#index'
 
