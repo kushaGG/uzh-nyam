@@ -13,4 +13,169 @@
  *= require_tree .
  *= require_self
  */
+ @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500);
  @import "bootstrap";
+
+
+
+//  nav {
+//     display: flex;
+//     min-height: 13vh;
+//     background-color: #DCDCDC;
+//     font-family: 'Varela Round', sans-serif;
+//  }
+//  nav li{
+//    list-style: none;
+//  }
+//  .nav-link {
+//  position:absolute;
+//  top: 5px;
+//  right: 25px;
+//  font-size: 20px;
+//  }
+//  .nav1-link {
+//      position:absolute;
+//      top: 12.5px;
+//      right: 80px;
+//      font-size: 20px;
+//      width: 30px;
+//  }
+//
+//  .navbar-link {
+//    position:absolute;
+//    color: warning;
+//    top: 1px;
+//    right: 70px;
+//    align: right;
+//    text-transform: uppercase;
+//    margin: 5px;
+//  }
+//
+//  .nav-menu li {
+//    list-style: none;
+//  }
+//  .nav-menu {
+//
+//    color: white;
+//    margin: 5px;
+//    font-weight: bold;
+//    letter-spacing: 3px;
+//    text-decoration: none;
+//    font-size: 15px;
+//  }
+//  .logo {
+//    position:absolute;
+//    left: 20px;
+//    top: 19px;
+//  }
+//
+//
+// .menu_drop {
+// position: absolute;
+// width: 100%;
+// opacity: 0;
+// top: -9999em;
+// border-right: 10px solid transparent;
+// right: 100%;
+// }
+// .name {
+//   background-color: #B22222;
+//   padding: 10px;
+//   display: block;
+//   border-bottom: 1px solid #666;
+//   transition: 0.2s all;
+// }
+// .nav-menu li:hover {
+// background: #B22222;
+// padding: 5px	5px	0	5px;
+// }
+// .name:hover .menu__drop {
+// top:0 ;
+// opacity: 1
+// }
+.navbar {
+	font-family: 'Ubuntu', sans-serif;
+	text-transform: uppercase;
+}
+.navbar-default {
+	background-color: #fff;
+	padding-bottom: 5px;
+	padding-top: 5px;
+
+	.navbar-nav > li > a {
+		color: #222;
+		&:hover {
+			color: darken(#f1c40f, 5%);
+			transition: 0.5s;
+		}
+	}
+
+	.navbar-header {
+
+		.navbar-brand {
+			color: #222;
+			letter-spacing: 1.4px;
+		}
+
+	}
+
+	.dropdown-menu > li > a:hover {
+		background-color: darken(#f1c40f, 5%);
+		color: #fff;
+	}
+
+	.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+		background-color: darken(#f1c40f, 5%);
+		color: #fff;
+	}
+
+}
+
+.dropdown-menu > .active > a {
+	background-color: #f1c40f;
+	color: #fff;
+}
+
+.menu__list {
+		position: relative;
+	}
+
+  .menu__list:hover .menu__drop {
+  		top:0 ;
+  		opacity: 1
+  	}
+
+	.menu__list::after {
+		content: " ";
+		position: absolute;
+		border:5px solid;
+		border-color: transparent transparent transparent #eee;
+		top:0.9em;
+		right: 0.4em;
+		transition: 0.2s;
+	}
+  .menu__list:hover::after {
+  		transform: scaleX(-1);
+
+  	}
+    .menu__drop {
+		position: absolute;
+		width: 100%;
+		opacity: 0;
+		top: -9999em;
+		border-top: 20px solid transparent;
+		top: 100%;
+
+	}
+  li {
+  	text-decoration: none;
+  }
+	.menu__list:hover .menu__drop {
+		top:0 ;
+		opacity: 1
+	}
+  ul {
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
