@@ -1,5 +1,10 @@
 .body {
-  background: #FFE4E1;
+margin: 0;
+  padding: 0;
+  background: url(app/assets/images/font.jpg);
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
 }
 .field {
   padding: 10px;
@@ -29,7 +34,7 @@
   border-color: silver;
   background: #CE0202;
   width: 500px;
-  height: 570px;
+  height: 600px;
   margin-left: 400px;
 }
 .fields3{
@@ -39,8 +44,9 @@
   border-color: silver;
   background: #CE0202;
   width: 500px;
-  height: 570px;
+  height: 540px;
   margin-left: 400px;
+  color: white;
 }
 .file {
   margin-left: 132px;
@@ -72,10 +78,26 @@ h3 {
   border-radius: 30px;
   margin-left: 130px;
 }
-.fields input[type="submit"]:hover {
-  cursor: pointer;
-  background-color: #800000;
-  color: #FFFFFF;
+
+.fields2 input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #A9A9A9;
+  color: #000;
+  font-size: 18px;
+  border-radius: 30px;
+  margin-left: 130px;
+}
+.fields3 input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #A9A9A9;
+  color: #000;
+  font-size: 18px;
+  border-radius: 30px;
+  margin-left: 130px;
 }
 
 .actions1 {
@@ -88,7 +110,13 @@ h3 {
   margin-top: 100px;
   cursor: pointer;
 }
+
 .signup2 {
+  margin-left: 135px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.login2 {
   margin-left: 135px;
   margin-top: 30px;
   cursor: pointer;

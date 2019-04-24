@@ -10,9 +10,9 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-   <form>
-    <%= f.submit "Send me" %>
-  </form>
+  <div class="actions">
+    <input type="submit" value="Send my password">
+  </div>
 <% end %>
 <div class="signup2">
 <%= link_to "Sign up", new_registration_path(resource_name), class:"text-white" %><br />

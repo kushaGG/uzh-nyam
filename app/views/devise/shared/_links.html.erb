@@ -7,7 +7,7 @@
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
 <div class="Signup">
-  <%= link_to "Sign up", new_registration_path(resource_name), class:"text-white" %><br />
+  <a><%= link_to "Sign up", new_registration_path(resource_name), class:"text-white" %></a><br />
   </div>
 <% end %>
 
