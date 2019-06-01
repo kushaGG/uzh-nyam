@@ -3,12 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable,
-         :validatable, authentication_keys: [:login]
-  attr_writer :login
+         :recoverable, :rememberable, :validatable,
+          authentication_keys: [:login]
 
+  validates :username, presence: true, length: 5..15, uniqueness: true, format: { without: /[!-\/\@\^\~\`\(\)\[\]\>\<\=]/ }
 
   mount_uploader :avatar, AvatarUploader
+
+  attr_writer :login
 
   def login
     @login || self.username || self.email
@@ -19,4 +21,6 @@ class User < ApplicationRecord
     login = conditions.delete(:login)
     where(conditions).where(["lower(username) = :value OR lower(email) = :value", {value: login.strip.downcase}]).first
   end
+
+  has_many :reviews
 end

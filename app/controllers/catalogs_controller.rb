@@ -10,6 +10,11 @@ class CatalogsController < ApplicationController
   # GET /catalogs/1
   # GET /catalogs/1.json
   def show
+    if @catalog.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @catalog.reviews.average(:rating).round(2)
+    end
   end
 
   # GET /catalogs/new

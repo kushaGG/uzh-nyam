@@ -4,6 +4,17 @@
   <strong>Title:</strong>
   <%= @catalog.title %>
 </p>
+<p>
+  <strong>Average Rating</strong>
+  <div class="average-review-rating" data-score=" <%= @average_review %> "></div>
+
+  <strong>Based on <%= @catalog.reviews.count %> reviews</strong>
+</p>
+<p>
+  <strong>Category:</strong>
+   <%= @catalog.category.title %>
+</p>
+
 
 <p>
   <strong>Location:</strong>
@@ -79,5 +90,27 @@
   <%= @catalog.address %>
 </p>
 
+<%= link_to "Add your review", new_catalog_review_path(@catalog.id) %> <br>
+
+<%= render @catalog.reviews %>
+
 <%= link_to 'Edit', edit_catalog_path(@catalog) %> |
 <%= link_to 'Back', catalogs_path %>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+
+  $('.average-review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
