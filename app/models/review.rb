@@ -4,4 +4,6 @@ class Review < ApplicationRecord
 
   belongs_to :user
   belongs_to :catalog
+  validates :comment, presence: true
+  validates :rating, presence: true
 end
