@@ -1,14 +1,10 @@
 class CatalogsController < ApplicationController
   before_action :set_catalog, only: [:show, :edit, :update, :destroy]
 
-  # GET /catalogs
-  # GET /catalogs.json
   def index
-    @catalogs = Catalog.all
+    @catalogs = Catalog.where(["approved = ?", false])
   end
 
-  # GET /catalogs/1
-  # GET /catalogs/1.json
   def show
     if @catalog.reviews.blank?
       @average_review = 0
@@ -78,6 +74,6 @@ class CatalogsController < ApplicationController
                                       :open_time_wednesday, :open_time_thursday, :open_time_friday, :open_time_saturday,
                                       :open_time_sunday, :close_time_monday, :close_time_tuesday, :close_time_wednesday,
                                       :close_time_thursday, :close_time_friday, :close_time_saturday, :close_time_sunday,
-                                      :description, {photos: []}, :has_free_wifi, :address)
+                                      :description, {photos: []}, :has_free_wifi, :category_id, :approved, :address)
     end
 end

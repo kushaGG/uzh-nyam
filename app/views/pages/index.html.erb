@@ -1,3 +1,11 @@
 <h1>Pages#index</h1>
 <p>Find me in app/views/pages/index.html.erb</p>
-<%= link_to "new", new_catalog_path %>
+<%= link_to "new", new_catalog_path %> <br>
+
+
+<% @categories.each do |x| %>
+  <%= link_to category_path(x) do %>
+    <%= image_tag(x.image.url, size: "200x200") %> <br>
+    <%= x.title %> <br>
+  <% end %>
+<% end %>

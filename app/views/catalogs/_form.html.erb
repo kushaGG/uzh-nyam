@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.all.collect{|x| [x.title, x.id]}, id: :catalog_category_id %>
+  </div>
+
+  <div class="field">
     <%= form.label :location %>
     <%= form.text_field :location, id: :catalog_location %>
   </div>

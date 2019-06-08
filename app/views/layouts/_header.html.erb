@@ -5,14 +5,17 @@
       <li><%= link_to "Home", root_path, :class => 'navbar-brand'  %></li>
     </div>
     <ul class="navbar-nav">
-
-      <li></li>
+      <% if user_signed_in? %>
+        <% if current_user.admin == true %>
+         <li><%= link_to 'Check new institutions', catalogs_path %></li>
+        <% end %>
+      <% end %>
     </ul>
     <ul class="navbar-nav navbar-right">
       <% if user_signed_in? %>
         <li class="nav-link">  <strong>
-          <%= current_user.email.split('@').first %></strong>
-        <%= image_tag(current_user.avatar_url, size: "30x30") %></li>
+          <%= current_user.username %></strong>
+          <%= image_tag(current_user.avatar_url, size: "30x30", :class => 'rounded-circle') %></li>
         <li class="nav-link"><%= link_to 'Edit profile', edit_user_registration_path%></li> 
         <li class="nav-link"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
