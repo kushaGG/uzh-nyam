@@ -71,16 +71,6 @@ ActiveRecord::Schema.define(version: 20190408153612) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "catalog_id"
-    t.string "body"
-    t.integer "rating"
-    t.string "photos"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.integer "user_id"
     t.integer "catalog_id"
