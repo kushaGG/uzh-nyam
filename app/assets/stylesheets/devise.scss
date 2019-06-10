@@ -1,0 +1,133 @@
+.body {
+margin: 0;
+  padding: 0;
+  background: url(app/assets/images/font.jpg);
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+.field {
+  padding: 10px;
+  margin-left: 113px;
+  width:70%;
+  color: white;
+}
+.field1 {
+  padding: 30px;
+  margin-left: 90px;
+  width:80%;
+}
+.fields {
+  margin-top: 20px;
+  border: 6px inset ;
+  padding: 7px;
+  border-color: silver;
+  background: #CE0202;
+  width: 500px;
+  height: 530px;
+  margin-left: 400px;
+}
+.fields2 {
+  margin-top: 20px;
+  border: 6px inset;
+  padding: 7px;
+  border-color: silver;
+  background: #CE0202;
+  width: 500px;
+  height: 600px;
+  margin-left: 400px;
+}
+.fields3{
+  margin-top: 20px;
+  border: 4px inset;
+  padding: 7px;
+  border-color: silver;
+  background: #CE0202;
+  width: 500px;
+  height: 540px;
+  margin-left: 400px;
+  color: white;
+}
+.file {
+  margin-left: 132px;
+  color: white;
+}
+
+h1 {
+  top: 20px;
+  text-align: center;
+  color: white;
+}
+h2 {
+  top: 20px;
+  text-align: center;
+  color: white;
+}
+h3 {
+  top: 20px;
+  text-align: center;
+  color: white;
+}
+.fields input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #A9A9A9;
+  color: #000;
+  font-size: 18px;
+  border-radius: 30px;
+  margin-left: 130px;
+}
+
+.fields2 input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #A9A9A9;
+  color: #000;
+  font-size: 18px;
+  border-radius: 30px;
+  margin-left: 130px;
+}
+.fields3 input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #A9A9A9;
+  color: #000;
+  font-size: 18px;
+  border-radius: 30px;
+  margin-left: 130px;
+}
+
+.actions1 {
+  margin-left: 130px;
+  size: 20%;
+  cursor: pointer;
+}
+.Signup{
+  margin-left: 130px;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.signup2 {
+  margin-left: 135px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.login2 {
+  margin-left: 135px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.Forgotpassword {
+  margin-left: 130px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+.Login {
+  margin-top: 10px;
+  margin-left: 135px;
+  cursor: pointer;
+}
