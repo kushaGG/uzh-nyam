@@ -55,10 +55,10 @@ slide p {
   color: #fff;
 }
 @keyframes slide {
-  0% {left: 100%; width: 100%;}
+  0% {left: 100%; width: 100%; opacity: 1;}
   5% {left: 0%;}
   25% {left: 0%;}
-  30% {left: -100%; width: 100%;}
-  30.0001% {left: -100%; width: 0;}
-  100% {left: 100%; width: 0;}
+  30% {left: -100%; width: 100%; opacity: 1;}
+  30.0001% {left: -100%; width: 0; opacity: 0;}
+  100% {left: 100%; width: 100%; opacity: 0;}
 }
