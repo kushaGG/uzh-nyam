@@ -10,85 +10,83 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :catalog_title %>
+<div class="category col-md-6 offset-md-3">
+  <div class="forms">
+    <%= form.text_field :title, id: :catalog_title, placeholder:"Title" %>
   </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :catalog_location %>
+  <div class="forms">
+    <%= form.text_field :location, id: :catalog_location, placeholder:"Location" %>
   </div>
 
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, id: :catalog_phone_number %>
+  <div class="forms">
+
+    <%= form.text_field :phone_number, id: :catalog_phone_number, placeholder:"Phone number" %>
   </div>
 
-  <div class="field">
-    <%= form.label :time_monday %>
+  <div class="forms">
+    <%= form.label :time_monday %><br>
     <%= form.time_select :open_time_monday, {:default => {:hour => '8', :minute => '00'}} %> -
     <%= form.time_select :close_time_monday, {:default => {:hour => '20', :minute => '00'}} %>
   </div>
 
-  <div class="field">
-    <%= form.label :time_tuesday %>
+  <div class="forms">
+    <%= form.label :time_tuesday %><br>
     <%= form.time_select :open_time_tuesday, {:default => {:hour => '8', :minute => '00'}} %> -
     <%= form.time_select :close_time_tuesday, {:default => {:hour => '20', :minute => '00'}} %>
   </div>
 
-  <div class="field">
-    <%= form.label :time_wednesday %>
+  <div class="forms">
+    <%= form.label :time_wednesday %><br>
     <%= form.time_select :open_time_wednesday, {:default => {:hour => '8', :minute => '00'}} %> -
     <%= form.time_select :close_time_wednesday, {:default => {:hour => '20', :minute => '00'}} %>
   </div>
 
-  <div class="field">
-    <%= form.label :time_thursday %>
+  <div class="forms">
+    <%= form.label :time_thursday %><br>
     <%= form.time_select :open_time_thursday, {:default => {:hour => '8', :minute => '00'}} %> -
     <%= form.time_select :close_time_thursday, {:default => {:hour => '20', :minute => '00'}} %>
   </div>
 
-  <div class="field">
-    <%= form.label :time_friday %>
+  <div class="forms">
+    <%= form.label :time_friday %><br>
     <%= form.time_select :open_time_friday, {:default => {:hour => '8', :minute => '00'}} %> -
     <%= form.time_select :close_time_friday, {:default => {:hour => '20', :minute => '00'}} %>
   </div>
 
-  <div class="field">
-    <%= form.label :time_sanday %>
+  <div class="forms">
+    <%= form.label :time_sanday %><br>
     <%= form.time_select :open_time_saturday, {:default => {:hour => '8', :minute => '00'}} %> -
     <%= form.time_select :close_time_saturday, {:default => {:hour => '20', :minute => '00'}} %>
   </div>
 
-  <div class="field">
-    <%= form.label :time_sunday %>
+  <div class="forms">
+    <%= form.label :time_sunday %><br>
     <%= form.time_select :open_time_sunday, {:default => {:hour => '8', :minute => '00'}} %> -
     <%= form.time_select :close_time_sunday, {:default => {:hour => '20', :minute => '00'}} %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :catalog_description %>
+  <div class="forms">
+
+    <%= form.text_field :description, id: :catalog_description, placeholder:"Description"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :photos %>
+  <div class="forms">
+    <%= form.label :photos %><br>
     <%= form.file_field :photos, multiple: true %>
   </div>
 
-  <div class="field">
+  <div class="forms">
     <%= form.label :has_free_wifi %>
     <%= form.check_box :has_free_wifi, id: :catalog_has_free_wifi %>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :catalog_address %>
+  <div class="forms"><br>
+    <%= form.text_field :address, id: :catalog_address, placeholder:"Address" %>
   </div>
 
-  <div class="actions">
+  <div class="submit">
     <%= form.submit %>
+  </div>
   </div>
 <% end %>
