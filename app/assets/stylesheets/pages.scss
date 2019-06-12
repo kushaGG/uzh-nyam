@@ -1,64 +1,65 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-html, body {
-  width: 100%;
-  height: 100%;
+body, #slider, .wrap, .slide-content {
+  margin: 0;
   padding: 0;
-  margin: 0px;
-}
-slider {
-  display: block;
   width: 100%;
-  height: 100%;
-  background-color: #1f1f1f;
-  overflow: hidden;
-  position: absolute;
+  height: 100vh;
+  overflow-x: hidden;
 }
-slider > * {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #1f1f1f;
-  animation: slide 12s infinite;
-  overflow: hidden;
+li {
+  list-style: none;
 }
-slide:nth-child(1) {
-  left: 0%;
-  animation-delay: -1s;
-  background-image: url(food-post.jpg);
+p.post1 {
+  font-size: 50px;
+  color: black;
+  background: rgba(255,245,215,0.6);
+  padding: 1em;
+}
+p.post2 {
+  font-size: 50px;
+  color: black;
+  padding: 1em;
+  background: rgba(255,245,215,0.6);
+}
+.wrap{position: relative}
+.slide {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-slide:nth-child(2) {
-  animation-delay: 2s;
-  background-image: url(pizza.jpg);
-  background-size: cover;
-  background-position: center;
+.slide1{background-image: url(food-post.jpg);
 }
-slide:nth-child(3) {
-  animation-delay: 5s;
-  background-image: url(kimfood.jpg);
-  background-size: cover;
-  background-position: center;
+.slide2{background-image: url(pizza.jpg);
 }
-slide p {
-  font-size: 70px;
+.slide3{background-image: url(kimfood.jpg);}
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  display: inline-block;
-  width: 100%;
-  margin-top: 300px;
+}
+.slide-content span {
+  font-size: 5rem;
   color: #fff;
 }
-@keyframes slide {
-  0% {left: 100%; width: 100%; opacity: 1;}
-  5% {left: 0%;}
-  25% {left: 0%;}
-  30% {left: -100%; width: 100%; opacity: 1;}
-  30.0001% {left: -100%; width: 0; opacity: 0;}
-  100% {left: 100%; width: 100%; opacity: 0;}
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 10px;
+}
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 10px;
 }
