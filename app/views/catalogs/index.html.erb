@@ -1,53 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Catalogs</h1>
+<h1 class="Catal">Catalogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Location</th>
-      <th>Phone number</th>
-      <th>Time monday</th>
-      <th>Time tuesday</th>
-      <th>Time wednesday</th>
-      <th>Time thursday</th>
-      <th>Time friday</th>
-      <th>Time saturday</th>
-      <th>Time sunday</th>
-      <th>Description</th>
-      <th>Photos</th>
-      <th>Has free wifi</th>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pole">
 
-  <tbody>
+
     <% @catalogs.each do |catalog| %>
-      <tr>
-        <td><%= catalog.title %></td>
-        <td><%= catalog.location %></td>
-        <td><%= catalog.phone_number %></td>
-        <td><%= catalog.open_time_monday %></td>
-        <td><%= catalog.open_time_tuesday %></td>
-        <td><%= catalog.open_time_wednesday %></td>
-        <td><%= catalog.open_time_thursday %></td>
-        <td><%= catalog.open_time_friday %></td>
-        <td><%= catalog.open_time_saturday %></td>
-        <td><%= catalog.open_time_sunday %></td>
-        <td><%= catalog.description %></td>
-        <td><%= catalog.photos %></td>
-        <td><%= catalog.has_free_wifi %></td>
-        <td><%= catalog.address %></td>
-        <td><%= link_to 'Show', catalog %></td>
-        <td><%= link_to 'Edit', edit_catalog_path(catalog) %></td>
-        <td><%= link_to 'Destroy', catalog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <strong>Title:</strong><%= catalog.title %><br>
+      <strong>Location:</strong>  <%= catalog.location %><br>
+        <strong>Phone number:</strong><%= catalog.phone_number %><br>
+      <strong>Open time Monday:</strong><%= catalog.open_time_monday %><br>
+        <strong>Open time Tuesday:</strong><%= catalog.open_time_tuesday %><br>
+      <strong>Open time Wednesday:</strong><%= catalog.open_time_wednesday %><br>
+      <strong>Open time Thursday:</strong><%= catalog.open_time_thursday %><br>
+        <strong>Open time Friday:</strong><%= catalog.open_time_friday %><br>
+      <strong>Open time Saturday:</strong><%= catalog.open_time_saturday %><br>
+        <strong>Open time Sunday:</strong><%= catalog.open_time_sunday %><br>
+      <strong>Description:</strong><%= catalog.description %><br>
+        <strong>Photo:</strong><%= catalog.photos %><br>
+      <strong>Has free wifi:</strong><%= catalog.has_free_wifi %><br>
+      <strong>Address:</strong><%= catalog.address %><br>
+      <%= link_to 'Show', catalog %><br>
+      <%= link_to 'Edit', edit_catalog_path(catalog) %><br>
+      <%= link_to 'Destroy', catalog, method: :delete, data: { confirm: 'Are you sure?' } %>
+
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
 <%= link_to 'New Catalog', new_catalog_path %>
+</div>

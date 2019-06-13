@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @catalog.title %>
+
+  <p class="showpole"><%= @catalog.title %></p>
 </p>
 <p>
-  <strong>Average Rating</strong>
+  <p class="showpole1">Average Rating</p>
   <div class="average-review-rating" data-score=" <%= @average_review %> "></div>
 
-  <strong>Based on <%= @catalog.reviews.count %> reviews</strong>
+  <p class="showpole1">Based on <%= @catalog.reviews.count %> reviews</p>
 </p>
 <p>
-  <strong>Category:</strong>
-   <%= @catalog.category.title %>
+  <p class="showpole1">Category:<%= @catalog.category.title %>
 </p>
 
 
