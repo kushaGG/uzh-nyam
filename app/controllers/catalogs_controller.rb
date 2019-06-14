@@ -2,7 +2,7 @@ class CatalogsController < ApplicationController
   before_action :set_catalog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @catalogs = Catalog.where(["approved = ?", false])
+    @catalogs = Catalog.where("approved = ?", false)
   end
 
   def show
@@ -60,6 +60,10 @@ class CatalogsController < ApplicationController
       format.html { redirect_to catalogs_url, notice: 'Catalog was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    @catalogs = Catalog.search(params)
   end
 
   private

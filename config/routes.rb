@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   resources :catalogs do
     resources :reviews
+    collection do
+      get 'search'
+    end
   end
 
   resources :categories do

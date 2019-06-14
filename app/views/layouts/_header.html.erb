@@ -7,9 +7,14 @@
     </div>
     <ul class="navbar-nav">
       <% if user_signed_in? %>
-        <% if current_user.admin == true %>
+        <% if current_user.admin? %>
          <li><%= link_to 'Check new institutions', catalogs_path %></li>
         <% end %>
+      <% end %>
+
+      <%= form_tag search_catalogs_path, method: :get do |f| %>
+        <%= text_field_tag :search, nil, :placeholder => "search" %>
+        <%= submit_tag "Search" %>
       <% end %>
     </ul>
 
