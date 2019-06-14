@@ -23,6 +23,7 @@ class CreateCatalogs < ActiveRecord::Migration[5.1]
       t.boolean :has_free_wifi
       t.string :address
       t.integer :category_id
+      t.boolean :approved, default: false
 
       t.timestamps
     end
