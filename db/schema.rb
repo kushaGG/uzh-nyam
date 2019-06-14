@@ -61,22 +61,14 @@ ActiveRecord::Schema.define(version: 20190408153612) do
     t.boolean "has_free_wifi"
     t.string "address"
     t.integer "category_id"
+    t.boolean "approved", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "catalog_id"
-    t.string "body"
-    t.integer "rating"
-    t.string "photos"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,6 +92,7 @@ ActiveRecord::Schema.define(version: 20190408153612) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"

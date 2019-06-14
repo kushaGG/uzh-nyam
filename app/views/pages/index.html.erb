@@ -1,3 +1,106 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
-<%= link_to "new", new_catalog_path %>
+<% @categories.each do |x| %>
+  <%= link_to category_path(x) do %>
+    <%= image_tag(x.image.url, size: "200x200") %> <br>
+    <%= x.title %> <br>
+  <% end %>
+<% end %>
+
+<%= form_tag search_catalogs_path, method: :get do |f| %>
+  <%= text_field_tag :search, nil, :placeholder => "search" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <div class="wrap">
+    <div id="arrow-left" class="arrow"></div>
+    <div id="slider">
+      <div class="slide slide1">
+        <div class="slide-content">
+          <p class="post1">Вітаємо тебе на нашому сайті Uzh-nyam!
+            У нас ти дуже просто зможеш знайти місце в якому можна не тільки
+            смачно поїсти, а ще й гарно відпочити
+          </p>
+        </div>
+      </div>
+      <div class="slide slide2">
+        <div class="slide-content">
+          <div class="post">
+          <p class="post2">Якщо ви хочете додати заклад до нашого сайту,
+            то вам сюди
+            <%= link_to "Додати заклад", new_catalog_path, class:"text-danger" %>
+          </p>
+        </div>
+        </div>
+      </div>
+      <div class="slide slide3">
+        <div class="slide-content">
+          <span>Image Three</span>
+        </div>
+      </div>
+    </div>
+    <div id="arrow-right" class="arrow"></div>
+    <script>
+      let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+
+
+    </script>
+  </div>
+
+
+  </body>
+  </html>

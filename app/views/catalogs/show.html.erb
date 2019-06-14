@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @catalog.title %>
+
+  <p class="showpole"><%= @catalog.title %></p>
 </p>
+
 <p>
-  <strong>Average Rating</strong>
+  <p class="showpole1">Average Rating</p>
   <div class="average-review-rating" data-score=" <%= @average_review %> "></div>
 
-  <strong>Based on <%= @catalog.reviews.count %> reviews</strong>
-</p>
-<p>
-  <strong>Category:</strong>
-   <%= @catalog.category.title %>
+  <p class="showpole1">Based on <%= @catalog.reviews.count %> reviews</p>
 </p>
 
+<p>
+  <p class="showpole1">Category:<%= @catalog.category.title %>
+</p>
 
 <p>
   <strong>Location:</strong>
@@ -26,47 +26,75 @@
   <%= @catalog.phone_number %>
 </p>
 
-<p>
-  <strong>Time monday:</strong>
-  <%= @catalog.open_time_monday.strftime("%H:%M") %> -
-  <%= @catalog.close_time_monday.strftime("%H:%M") %>
-</p>
+<% if @catalog.open_time_monday == "2000-01-01 00:00:00" && @catalog.close_time_monday == "2000-01-01 00:00:00"%>
+  <p> Monday: We close </p>
+<% else %>
+  <p>
+    <strong>Time monday:</strong>
+    <%= @catalog.open_time_monday.strftime("%H:%M") %> -
+    <%= @catalog.close_time_monday.strftime("%H:%M") %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Time tuesday:</strong>
-  <%= @catalog.open_time_tuesday.strftime("%H:%M") %> -
-  <%= @catalog.close_time_tuesday.strftime("%H:%M") %>
-</p>
+<% if @catalog.open_time_tuesday == "2000-01-01 00:00:00" && @catalog.close_time_tuesday == "2000-01-01 00:00:00"%>
+  <p> Tuesday: We close </p>
+<% else %>
+  <p>
+    <strong>Time tuesday:</strong>
+    <%= @catalog.open_time_tuesday.strftime("%H:%M") %> -
+    <%= @catalog.close_time_tuesday.strftime("%H:%M") %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Time wednesday:</strong>
-  <%= @catalog.open_time_wednesday.strftime("%H:%M") %> -
-  <%= @catalog.close_time_wednesday.strftime("%H:%M") %>
-</p>
+<% if @catalog.open_time_wednesday == "2000-01-01 00:00:00" && @catalog.close_time_wednesday == "2000-01-01 00:00:00"%>
+  <p> Wednesday: We close </p>
+<% else %>
+  <p>
+    <strong>Time wednesday:</strong>
+    <%= @catalog.open_time_wednesday.strftime("%H:%M") %> -
+    <%= @catalog.close_time_wednesday.strftime("%H:%M") %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Time thursday:</strong>
-  <%= @catalog.open_time_thursday.strftime("%H:%M") %> -
-  <%= @catalog.close_time_thursday.strftime("%H:%M") %>
-</p>
+<% if @catalog.open_time_thursday == "2000-01-01 00:00:00" && @catalog.close_time_thursday == "2000-01-01 00:00:00"%>
+  <p> Thursday: We close </p>
+<% else %>
+  <p>
+    <strong>Time thursday:</strong>
+    <%= @catalog.open_time_thursday.strftime("%H:%M") %> -
+    <%= @catalog.close_time_thursday.strftime("%H:%M") %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Time friday:</strong>
-  <%= @catalog.open_time_friday.strftime("%H:%M") %> -
-  <%= @catalog.close_time_friday.strftime("%H:%M") %>
-</p>
+<% if @catalog.open_time_friday == "2000-01-01 00:00:00" && @catalog.close_time_friday == "2000-01-01 00:00:00"%>
+  <p> Friday: We close </p>
+<% else %>
+  <p>
+    <strong>Time friday:</strong>
+    <%= @catalog.open_time_friday.strftime("%H:%M") %> -
+    <%= @catalog.close_time_friday.strftime("%H:%M") %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Time saturday:</strong>
-  <%= @catalog.open_time_saturday.strftime("%H:%M") %> -
-  <%= @catalog.close_time_saturday.strftime("%H:%M") %>
-</p>
+<% if @catalog.open_time_saturday == "2000-01-01 00:00:00" && @catalog.close_time_saturday == "2000-01-01 00:00:00"%>
+  <p> Saturday: We close </p>
+<% else %>
+  <p>
+    <strong>Time saturday:</strong>
+    <%= @catalog.open_time_saturday.strftime("%H:%M") %> -
+    <%= @catalog.close_time_saturday.strftime("%H:%M") %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Time sunday:</strong>
-  <%= @catalog.open_time_sunday.strftime("%H:%M") %> -
-  <%= @catalog.close_time_sunday.strftime("%H:%M") %>
-</p>
+<% if @catalog.open_time_sunday == "2000-01-01 00:00:00" && @catalog.close_time_sunday == "2000-01-01 00:00:00"%>
+  <p> Sunday: We close </p>
+<% else %>
+  <p>
+    <strong>Time sunday:</strong>
+    <%= @catalog.open_time_sunday.strftime("%H:%M") %> -
+    <%= @catalog.close_time_sunday.strftime("%H:%M") %>
+  </p>
+<% end %>
 
 <p>
   <strong>Description:</strong>
