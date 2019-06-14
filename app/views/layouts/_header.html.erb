@@ -24,18 +24,29 @@
       <% if user_signed_in? %>
       <ul class="dropdown">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-danger" data-toggle="dropdown" href="#"><%= image_tag(current_user.avatar_url, size:"40x40", class:"rounded-circle") %>
+          <a class="nav-link dropdown-toggle text-danger" data-toggle="dropdown"><%= image_tag(current_user.avatar_url, size:"40x40", class:"rounded-circle") %>
             <%= current_user.username %></a>
           <div class="dropdown-menu">
 
-          <a class="dropdown-item2"><%= link_to "Категорії",admin_categories_path, class: "nav-link text-danger" %></a>
           <a class="dropdown-item1"><%= link_to "Вийти", destroy_user_session_path,class: "nav-link text-danger", method: :delete %></a><br />
             </div>
 
-        </li>
+
         </ul>
       <% else %>
-        <li class="login"><%= link_to "Ввійти", new_user_session_path,class: "nav-link text-danger"%></li>
+        <li class="login"><%= link_to "Увійти", new_user_session_path,class: "nav-link text-danger"%></li>
       <% end %>
+      <ul class="dropdown">
+        <li class="nav-item dropdown">
+                <a class="drop1 dropdown-toggle text-danger" data-toggle="dropdown">Категорії
+                  <span class="caret"></span>
+                </a>
+                <div class="drops dropdown-menu">
+                  <% Category.all.each do |category|%>
+                  <a data-toggle="modal"><%=link_to category.title , catalog_path(category.title)%><br></a>
+                  <%end%>
+                </div>
+              </ul>
+
   </div>
 </nav>
