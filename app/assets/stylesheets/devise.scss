@@ -34,7 +34,7 @@ margin: 0;
   border-color: silver;
   background: #CE0202;
   width: 500px;
-  height: 600px;
+
   margin-left: 400px;
 }
 .fields3{
@@ -68,26 +68,33 @@ h3 {
   text-align: center;
   color: white;
 }
+p.registr {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+}
 .fields input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
+  width: 47%;
   background: #A9A9A9;
   color: #000;
   font-size: 18px;
-  border-radius: 30px;
-  margin-left: 130px;
+  border-radius: 20px;
+  margin-left: 125px;
 }
 
 .fields2 input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
+  width: 47%;
   background: #A9A9A9;
   color: #000;
   font-size: 18px;
-  border-radius: 30px;
-  margin-left: 130px;
+  border-radius: 20px;
+  margin-left: 125px;
 }
 .fields3 input[type="submit"] {
   border: none;
@@ -98,6 +105,7 @@ h3 {
   font-size: 18px;
   border-radius: 30px;
   margin-left: 130px;
+
 }
 
 .actions1 {
@@ -107,7 +115,7 @@ h3 {
 }
 .Signup{
   margin-left: 130px;
-  margin-top: 100px;
+  margin-top: 40px;
   cursor: pointer;
 }
 
@@ -128,6 +136,7 @@ h3 {
 }
 .Login {
   margin-top: 10px;
-  margin-left: 135px;
+  margin-left: 210px;
   cursor: pointer;
+  font-size: 20px;
 }

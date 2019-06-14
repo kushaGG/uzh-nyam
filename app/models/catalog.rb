@@ -12,7 +12,7 @@ class Catalog < ApplicationRecord
 
   validates :title, presence: true, length: {maximum: 30}
   validates :location, presence: true
-  validates :phone_number, numericality: { only_integer: true }, length: {9...11}
+  validates :phone_number, numericality: { only_integer: true }, length: {in: 8..11}
   validates :description, presence: true, length: {maximum: 140}
   validates :photos, presence: true
   validates :address, presence: true
