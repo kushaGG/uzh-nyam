@@ -7,15 +7,19 @@
     </div>
     <ul class="navbar-nav">
       <% if user_signed_in? %>
-        <% if current_user.admin? %>
+
          <li><%= link_to 'Check new institutions', catalogs_path %></li>
         <% end %>
-      <% end %>
 
+
+    <div class="search">
       <%= form_tag search_catalogs_path, method: :get do |f| %>
-        <%= text_field_tag :search, nil, :placeholder => "search" %>
-        <%= submit_tag "Search" %>
+      <%= text_field_tag :search, nil, :placeholder => "Search" %>
+      <div class="col-auto">
+      <%= submit_tag "Search", class: 'button-class' %>
+      </div>
       <% end %>
+      </div>
     </ul>
 
       <% if user_signed_in? %>

@@ -1,14 +1,10 @@
 <% @categories.each do |x| %>
   <%= link_to category_path(x) do %>
-    <%= image_tag(x.image.url, size: "200x200") %> <br>
+     <br>
     <%= x.title %> <br>
   <% end %>
 <% end %>
 
-<%= form_tag search_catalogs_path, method: :get do |f| %>
-  <%= text_field_tag :search, nil, :placeholder => "search" %>
-  <%= submit_tag "Search" %>
-<% end %>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -41,7 +37,10 @@
       </div>
       <div class="slide slide3">
         <div class="slide-content">
-          <span>Image Three</span>
+          <%= form_tag search_catalogs_path, method: :get do |f| %>
+            <%= text_field_tag :search, nil, :placeholder => "search" %>
+            <%= submit_tag "Search" %>
+          <% end %>
         </div>
       </div>
     </div>
