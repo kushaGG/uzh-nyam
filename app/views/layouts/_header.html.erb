@@ -6,7 +6,7 @@
       <%= link_to image_tag("/assets/logo1.png"), root_path %>
     </div>
     <ul class="navbar-nav">
-  
+
     <div class="search">
 
       <%= form_tag search_catalogs_path, method: :get do |f| %>
@@ -34,15 +34,11 @@
       <% else %>
         <li class="login"><%= link_to "Увійти", new_user_session_path,class: "nav-link text-danger"%></li>
       <% end %>
-      <ul class="dropdown">
+      <ul class="dropdow">
         <li class="nav-item dropdown">
-                <a class="drop1 dropdown-toggle text-danger" data-toggle="dropdown">Категорії
-                  <span class="caret"></span>
-                </a>
+                <a class="drop1 dropdown-toggle text-danger" data-toggle="dropdown">Категорії</a>
                 <div class="drops dropdown-menu">
-                  <% Category.all.each do |category|%>
-                  <a data-toggle="modal"><%=link_to category.title , catalog_path(category.title)%><br></a>
-                  <%end%>
+                  
                 </div>
               </ul>
 
