@@ -37,10 +37,13 @@
       </div>
       <div class="slide slide3">
         <div class="slide-content">
-          <%= form_tag search_catalogs_path, method: :get do |f| %>
-            <%= text_field_tag :search, nil, :placeholder => "search" %>
-            <%= submit_tag "Search" %>
-          <% end %>
+          <p class="post3">
+          <% if user_signed_in? %>
+
+             <%= link_to 'Перевірте нові установи', catalogs_path, class:"text-danger" %>
+            <% end %>
+            </p>
+            </div>
         </div>
       </div>
     </div>
@@ -98,7 +101,7 @@ startSlide();
 
 
     </script>
-  </div>
+
 
 
   </body>

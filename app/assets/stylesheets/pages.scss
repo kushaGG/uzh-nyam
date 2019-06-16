@@ -9,6 +9,8 @@ body, #slider, .wrap, .slide-content {
 li {
   list-style: none;
 }
+/*==================================================================
+ [ Transparency ]*/
 p.post1 {
   font-size: 50px;
   color: red;
@@ -23,6 +25,15 @@ p.post2 {
   padding: 1em;
   background: rgba(255,245,215,0.6);
 }
+p.post3 {
+  font-size: 50px;
+  color: red;
+  background: rgba(255,245,215,0.6);
+  padding: 1em;
+  font-family: 'Lobster', cursive;
+}
+/*==================================================================
+ [ Photoslide ]*/
 .wrap{position: relative}
 .slide {
   background-size: cover;
@@ -45,6 +56,8 @@ p.post2 {
   font-size: 5rem;
   color: #fff;
 }
+/*==================================================================
+ [ Arrow ]*/
 .arrow {
   cursor: pointer;
   position: absolute;
@@ -65,4 +78,5 @@ p.post2 {
   border-color: transparent transparent transparent #fff;
   right: 0;
   margin-right: 10px;
+  top: 425px;
 }
