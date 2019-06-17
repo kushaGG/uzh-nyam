@@ -1,53 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Catalogs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Location</th>
-      <th>Phone number</th>
-      <th>Time monday</th>
-      <th>Time tuesday</th>
-      <th>Time wednesday</th>
-      <th>Time thursday</th>
-      <th>Time friday</th>
-      <th>Time saturday</th>
-      <th>Time sunday</th>
-      <th>Description</th>
-      <th>Photos</th>
-      <th>Has free wifi</th>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @catalogs.each do |catalog| %>
-      <tr>
-        <td><%= catalog.title %></td>
-        <td><%= catalog.location %></td>
-        <td><%= catalog.phone_number %></td>
-        <td><%= catalog.time_monday %></td>
-        <td><%= catalog.time_tuesday %></td>
-        <td><%= catalog.time_wednesday %></td>
-        <td><%= catalog.time_thursday %></td>
-        <td><%= catalog.time_friday %></td>
-        <td><%= catalog.time_saturday %></td>
-        <td><%= catalog.time_sunday %></td>
-        <td><%= catalog.description %></td>
-        <td><%= catalog.photos %></td>
-        <td><%= catalog.has_free_wifi %></td>
-        <td><%= catalog.address %></td>
-        <td><%= link_to 'Show', catalog %></td>
-        <td><%= link_to 'Edit', edit_catalog_path(catalog) %></td>
-        <td><%= link_to 'Destroy', catalog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Catalog', new_catalog_path %>
+Do not approved institution: <strong> <%= @catalogs.count %></strong>
+<% @catalogs.each do |x| %>
+  <div class="card">
+    <h5 class="card-header"><%= link_to x.title, edit_catalog_path(x)%>       <%= x.category.title %></h5>
+    <div class="card-body">
+      <% x.photos.each do |y| %>
+        <%= image_tag(y.url, size: "300x200") %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -15,7 +15,7 @@ ActiveAdmin.register Catalog do
 permit_params :title, :location, :phone_number, :open_time_monday, :open_time_tuesday, :open_time_wednesday,
               :open_time_thursday, :open_time_friday, :open_time_saturday, :open_time_sunday, :close_time_monday,
               :close_time_tuesday, :close_time_wednesday, :close_time_thursday, :close_time_friday, :close_time_saturday,
-              :close_time_sunday, :description, :address, :has_free_wifi, :category_id, photos: []
+              :close_time_sunday, :description, :address, :has_free_wifi, :category_id, :approved, photos: []
 
 form html: { multipart: true } do |f|
    f.semantic_errors
@@ -43,6 +43,7 @@ form html: { multipart: true } do |f|
      f.input :address
      f.input :photos, as: :file, input_html: { multiple: true }
      f.input :has_free_wifi
+     f.input :approved
    end
    actions
  end

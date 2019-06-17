@@ -13,4 +13,64 @@
  *= require_tree .
  *= require_self
  */
+ @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500);
  @import "bootstrap";
+
+.navbar {
+	font-family: 'Ubuntu', sans-serif;
+	text-transform: uppercase;
+}
+.navbar-default {
+	background-color: #F5F5F5;
+	padding-bottom: 60px;
+	padding-top: 5px;
+}
+
+	.navbar-nav > li > a {
+		color: #222;
+		&:hover {
+			color: darken(#FF0000, 5%);
+			transition: 0.5s;
+		}
+	}
+
+	.navbar-header {
+    position:absolute;
+    left: 60px;
+    top: 8px;
+
+	}
+.dropdown {
+  position: absolute;
+  right: 20px;
+  top: 4px;
+  font-size: 20px;
+
+}
+.dropdown-menu {
+background-color: #F5F5F5;
+border-right: 4px inset;
+border-left: 4px inset;
+border-bottom: 4px inset;
+border-color: #CE0202;
+height: 100px;
+}
+
+  a {
+  	list-style: none;
+  }
+
+  ul {
+	margin:0;
+	padding: 0;
+	list-style: none;
+  text-decoration: none;
+}
+.login {
+  position: absolute;
+  right: 50px;
+  top: 15px;
+  font-size: 20px;
+  list-style: none;
+
+}
