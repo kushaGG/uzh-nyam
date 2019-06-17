@@ -5,11 +5,8 @@
      <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 700px;">
        <div class="photo-slide" style="width: auto; position: relative;">
          <div class="slide" style="float: none; list-style: none; position: absolute; z-index: 50; display: block; width: 1300px;">
-           : :before
 
-           <% @catalog.photos.each do | photo | %>
-              <%= image_tag(photo.url, size: "1300x700")%>
-           <% end %>
+           <%= image_tag(@catalog.photos[0].url, size: "1300x700")%>
            <div class="res-title">
               <p class="showpole"><%= @catalog.title %></p>
               </div>
@@ -20,7 +17,7 @@
               <p class="showpole1">Базується на  <%= @catalog.reviews.count %> reviews</p>
               </div>
               <div class="shadow"></div>
-              : :after
+
 
           </div>
          </div>
@@ -28,113 +25,151 @@
       </div>
 
  </section>
-
-
+<div class="stovpchiki">
+<div class="about">
+<h3 class="Opus">Головні контакти</h3>
+  <div class="pole1">
 <p>
-  <p class="showpole1">Категорія:<%= @catalog.category.title %>
+  <strong>Категорія: </strong><%= @catalog.category.title %>
 </p>
-
+</div>
+<div class="pole1">
 <p>
-  <strong>Location:</strong>
+  <strong>Розташування:</strong>
   <%= link_to @catalog.location, @catalog.location %>
 </p>
-
+</div>
+<div class="pole1">
 <p>
-  <strong>Phone number:</strong>
+  <strong>Номер телефону:</strong>
   <%= @catalog.phone_number %>
 </p>
+</div>
+<div class="pole1">
+<p>
+  <strong>Адреса:</strong>
+  <%= @catalog.address %>
+</p>
+</div>
+</div>
 
+<div class="right">
+  <h3 class="Open">Час і дні роботи</h3>
+  <div class="pole1">
 <% if @catalog.open_time_monday == "2000-01-01 00:00:00" && @catalog.close_time_monday == "2000-01-01 00:00:00"%>
-  <p> Monday: We close </p>
+  <p> Понеділок: Закрито </p>
 <% else %>
+
   <p>
-    <strong>Time monday:</strong>
+    <strong>Час в понеділок:</strong>
     <%= @catalog.open_time_monday.strftime("%H:%M") %> -
     <%= @catalog.close_time_monday.strftime("%H:%M") %>
   </p>
 <% end %>
-
+</div>
+<div class="pole1">
 <% if @catalog.open_time_tuesday == "2000-01-01 00:00:00" && @catalog.close_time_tuesday == "2000-01-01 00:00:00"%>
-  <p> Tuesday: We close </p>
+  <p> ВІвторок: Ми закриті </p>
 <% else %>
   <p>
-    <strong>Time tuesday:</strong>
+    <strong>Час в вівторок:</strong>
     <%= @catalog.open_time_tuesday.strftime("%H:%M") %> -
     <%= @catalog.close_time_tuesday.strftime("%H:%M") %>
   </p>
 <% end %>
-
+</div>
+<div class="pole1">
 <% if @catalog.open_time_wednesday == "2000-01-01 00:00:00" && @catalog.close_time_wednesday == "2000-01-01 00:00:00"%>
-  <p> Wednesday: We close </p>
+  <p> Середа: Ми закриті </p>
 <% else %>
   <p>
-    <strong>Time wednesday:</strong>
+    <strong>Час в середу:</strong>
     <%= @catalog.open_time_wednesday.strftime("%H:%M") %> -
     <%= @catalog.close_time_wednesday.strftime("%H:%M") %>
   </p>
 <% end %>
-
+</div>
+<div class="pole1">
 <% if @catalog.open_time_thursday == "2000-01-01 00:00:00" && @catalog.close_time_thursday == "2000-01-01 00:00:00"%>
-  <p> Thursday: We close </p>
+  <p> Четвер: Ми закриті </p>
 <% else %>
   <p>
-    <strong>Time thursday:</strong>
+    <strong>Час в четвер:</strong>
     <%= @catalog.open_time_thursday.strftime("%H:%M") %> -
     <%= @catalog.close_time_thursday.strftime("%H:%M") %>
   </p>
 <% end %>
-
+</div>
+<div class="pole1">
 <% if @catalog.open_time_friday == "2000-01-01 00:00:00" && @catalog.close_time_friday == "2000-01-01 00:00:00"%>
-  <p> Friday: We close </p>
+  <p> П'ятниця': Ми закриті</p>
 <% else %>
   <p>
-    <strong>Time friday:</strong>
+    <strong>Час в п'ятницю:</strong>
     <%= @catalog.open_time_friday.strftime("%H:%M") %> -
     <%= @catalog.close_time_friday.strftime("%H:%M") %>
   </p>
 <% end %>
-
+</div>
+<div class="pole1">
 <% if @catalog.open_time_saturday == "2000-01-01 00:00:00" && @catalog.close_time_saturday == "2000-01-01 00:00:00"%>
-  <p> Saturday: We close </p>
+  <p> Субота: Ми закриті </p>
 <% else %>
   <p>
-    <strong>Time saturday:</strong>
+    <strong>Час в суботу:</strong>
     <%= @catalog.open_time_saturday.strftime("%H:%M") %> -
     <%= @catalog.close_time_saturday.strftime("%H:%M") %>
   </p>
 <% end %>
-
+</div>
+<div class="pole1">
 <% if @catalog.open_time_sunday == "2000-01-01 00:00:00" && @catalog.close_time_sunday == "2000-01-01 00:00:00"%>
-  <p> Sunday: We close </p>
+  <p> Неділя: Ми закриті</p>
 <% else %>
   <p>
-    <strong>Time sunday:</strong>
+    <strong>Час в неділю:</strong>
     <%= @catalog.open_time_sunday.strftime("%H:%M") %> -
     <%= @catalog.close_time_sunday.strftime("%H:%M") %>
   </p>
 <% end %>
-
+</div>
+</div>
+<div class="Deskr">
+  <h3 class="Open">Опис</h3>
+  <div class="pole1">
 <p>
-  <strong>Description:</strong>
+
+  <strong>Опис:</strong>
   <%= @catalog.description %>
 </p>
-
+</div>
+<div class="pole1">
 <p>
-  <strong>Has free wifi:</strong>
+  <strong>Наявність безкоштовного wi-fi:</strong>
   <%= @catalog.has_free_wifi %>
 </p>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @catalog.address %>
-</p>
-
-<%= link_to "Add your review", new_catalog_review_path(@catalog.id) %> <br>
+<div class="pole1">
+<%= link_to "Додати відгук", new_catalog_review_path(@catalog.id), class:"text-danger" %> <br>
 
 <%= render @catalog.reviews %>
+</div>
+<div class="pole1">
+<%= link_to 'Редагувати', edit_catalog_path(@catalog), class:"text-danger" %>
+</div>
+</div>
+</div>
+<div class="photos">
+<strong class="tit">Фото:</strong>
+<p>
+<% @catalog.photos.each do | photo | %>
+   <%= image_tag(photo.url, size: "500x300")%>
+<% end %>
+</p>
+</div>
 
-<%= link_to 'Edit', edit_catalog_path(@catalog) %> |
-<%= link_to 'Back', catalogs_path %>
+
 
 <script>
   $('.review-rating').raty({

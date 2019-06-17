@@ -1,4 +1,9 @@
 <hr>
+
+<% if user_signed_in? %>
+
+   <%= link_to 'Перевірте нові установи', catalogs_path, class:"text-danger" %>
+  <% end %>
 <p>Language</p>
 English<br>
 Ukrainian<br>

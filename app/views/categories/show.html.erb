@@ -1,12 +1,19 @@
 <% @category.catalogs.each do |x| %>
   <% if x.approved == true %>
     <div class="card">
-      <h5 class="card-header"><%= link_to x.title, catalog_path(x)%></h5>
-      <div class="card-body">
+      <h5 class="card-header"><%= link_to x.title, catalog_path(x), class:"text-danger"%></h5>
+
+         <div id="mainwrapper">
+       <div id="box-4" class="box">
         <% x.photos.each do |y| %>
-          <%= image_tag(y.url, size: "300x200") %>
+          <%= image_tag(y.url, size: "700x300") %>
         <% end %>
+        <span class="caption slide-caption">
+    			<h3>Chili Pizza</h3>
+    			<p>Завітайте до нас і скуштуйте найкращу піцу в місті</p>
+    		</span>
       </div>
+    </div>
     </div>
   <% end %>
 <% end %>
