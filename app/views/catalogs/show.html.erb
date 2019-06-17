@@ -1,19 +1,37 @@
+<div  class="showpage">
 <p id="notice"><%= notice %></p>
+ <section class="main-slider photo-slidewrap" >
+   <div class="bx-wrapper" style="max-width: 100%;">
+     <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 700px;">
+       <div class="photo-slide" style="width: auto; position: relative;">
+         <div class="slide" style="float: none; list-style: none; position: absolute; z-index: 50; display: block; width: 1300px;">
+           : :before
+
+           <% @catalog.photos.each do | photo | %>
+              <%= image_tag(photo.url, size: "1300x700")%>
+           <% end %>
+           <div class="res-title">
+              <p class="showpole"><%= @catalog.title %></p>
+              </div>
+              <div class="aver">
+              <p class="showpole1">Середній рейтинг</p>
+              <div class="average-review-rating" data-score=" <%= @average_review %> "></div>
+
+              <p class="showpole1">Базується на  <%= @catalog.reviews.count %> reviews</p>
+              </div>
+              <div class="shadow"></div>
+              : :after
+
+          </div>
+         </div>
+        </div>
+      </div>
+
+ </section>
+
 
 <p>
-
-  <p class="showpole"><%= @catalog.title %></p>
-</p>
-
-<p>
-  <p class="showpole1">Average Rating</p>
-  <div class="average-review-rating" data-score=" <%= @average_review %> "></div>
-
-  <p class="showpole1">Based on <%= @catalog.reviews.count %> reviews</p>
-</p>
-
-<p>
-  <p class="showpole1">Category:<%= @catalog.category.title %>
+  <p class="showpole1">Категорія:<%= @catalog.category.title %>
 </p>
 
 <p>
@@ -102,13 +120,6 @@
 </p>
 
 <p>
-  <strong>Photos:</strong> <br>
-  <% @catalog.photos.each do | photo | %>
-  		<%= image_tag(photo.url, size: "500x300")%>	<br> <br>
-  <% end %>
-</p>
-
-<p>
   <strong>Has free wifi:</strong>
   <%= @catalog.has_free_wifi %>
 </p>
@@ -142,3 +153,4 @@
     path: '/assets/'
   });
 </script>
+</div>
