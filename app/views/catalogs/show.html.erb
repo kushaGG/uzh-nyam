@@ -150,14 +150,8 @@
 </p>
 </div>
 
-<div class="pole1">
-<%= link_to "Додати відгук", new_catalog_review_path(@catalog.id), class:"text-danger" %> <br>
 
-<%= render @catalog.reviews %>
-</div>
-<div class="pole1">
-<%= link_to 'Редагувати', edit_catalog_path(@catalog), class:"text-danger" %>
-</div>
+
 </div>
 </div>
 <div class="photos">
@@ -167,6 +161,11 @@
    <%= image_tag(photo.url, size: "500x300")%>
 <% end %>
 </p>
+</div>
+<div class="pole1">
+<%= link_to "Додати відгук", new_catalog_review_path(@catalog.id), class:"text-danger" %> <br>
+
+<%= render @catalog.reviews %>
 </div>
 
 

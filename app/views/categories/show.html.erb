@@ -1,5 +1,5 @@
 <% @category.catalogs.each do |x| %>
-  <% if x.approved == true %>
+  <% if x.approved? %>
     <div class="card">
       <h5 class="card-header"><%= link_to x.title, catalog_path(x), class:"text-danger"%></h5>
 
@@ -9,8 +9,8 @@
           <%= image_tag(y.url, size: "700x300") %>
         <% end %>
         <span class="caption slide-caption">
-    			<h3>Chili Pizza</h3>
-    			<p>Завітайте до нас і скуштуйте найкращу піцу в місті</p>
+    			<h3><%= x.title %></h3>
+    			<p><%= x.description %></p>
     		</span>
       </div>
     </div>

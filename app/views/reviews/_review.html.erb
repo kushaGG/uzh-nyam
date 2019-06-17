@@ -5,7 +5,7 @@
 <% end %>
 
 <% if user_signed_in? %>
-	<% if review.user_id == current_user.id %>
+	<% if review.user_id == current_user.id || current_user.admin? %>
 		<%= link_to "Edit", edit_catalog_review_path(review.catalog, review) %>
 		<%= link_to "Delete", catalog_review_path(review.catalog, review), method: :delete, data: {confirm: "Are you sure?"} %>
 	<% end %>
