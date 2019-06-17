@@ -17,9 +17,11 @@ RSpec.describe CatalogsController, type: :controller do
 
 
   describe 'POST #create' do
-    it "should create catalog and refresh the page" do
-      post :create, params: {catalog: {title:"aaaaa"}}
+    it "should create catalog and refresh page" do
+      # pp catalog = Catalog.new(title: 'aaaaa', location: 'nooooo')
+      # post :create, params: {id: catalog.to_param}
       # expect(subject.catalog_url.title).to eq("aaaaa")
+      expect(response).to be_success
       expect(response).to have_http_status(200)
     end
   end
