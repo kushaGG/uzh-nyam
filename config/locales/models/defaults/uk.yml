@@ -1,13 +1,15 @@
 uk:
   activerecord:
     models:
-      post:
-      profile:
+      catalog:
+      category:
+      review:
     attributes:
-      post:
-        title: "Заголовок"
-        body: "Опис"
-      profile:
-        nickname: "Ім'я"
-        country: "Країна"
-        avatar: "Фото"
+      catalog:
+        title: "Назва"
+        location: "Розташування"
+        phone_number: "Номер телефону"
+        description: "Опис"
+      category:
+        title: "Назва"
+        image: "Фото"
