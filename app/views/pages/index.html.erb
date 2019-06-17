@@ -86,12 +86,23 @@ startSlide();
     </script>
     <p class="Cate">Категорії</p>
 <div class="Categorii">
+  <div class="photos1">
     <% @categories.each do |x| %>
+  
+<div class="photos1">
+  <%= x.title %>
+  <p>
       <%= link_to category_path(x) do %>
-        <%= x.title %> <br>
-        <%= image_tag(x.image_url, size: "400x200") %><br>
+
+
+        <%= image_tag(x.image_url, size: "400x200") %>
+
+
       <% end %>
+      </p>
+  </div>
     <% end %>
+
     </div>
 
 

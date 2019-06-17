@@ -25,7 +25,8 @@
           <a class="nav-link dropdown-toggle text-danger" data-toggle="dropdown"><%= image_tag(current_user.avatar_url, size:"40x40", class:"rounded-circle") %>
             <%= current_user.username %></a>
           <div class="dropdown-menu">
-
+               <a class="dropdown-item1"><%= link_to "Профайл",edit_user_registration_path(current_user), class: "nav-link text-danger"%></a><br />
+                 
           <a class="dropdown-item1"><%= link_to "Вийти", destroy_user_session_path,class: "nav-link text-danger", method: :delete %></a><br />
             </div>
 
@@ -34,6 +35,6 @@
       <% else %>
         <li class="login"><%= link_to "Увійти", new_user_session_path,class: "nav-link text-danger"%></li>
       <% end %>
-      
+
   </div>
 </nav>
