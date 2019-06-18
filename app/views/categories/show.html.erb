@@ -1,5 +1,5 @@
 <% @category.catalogs.each do |x| %>
-  <% if x.approved == true %>
+  <% if x.approved? %>
     <div class="card">
       <h5 class="card-header"><%= link_to x.title, catalog_path(x)%></h5>
       <div class="card-body">
