@@ -9,6 +9,8 @@ body, #slider, .wrap, .slide-content {
 li {
   list-style: none;
 }
+/*==================================================================
+ [ Transparency ]*/
 p.post1 {
   font-size: 50px;
   color: red;
@@ -23,6 +25,15 @@ p.post2 {
   padding: 1em;
   background: rgba(255,245,215,0.6);
 }
+p.post3 {
+  font-size: 50px;
+  color: red;
+  background: rgba(255,245,215,0.6);
+  padding: 1em;
+  font-family: 'Lobster', cursive;
+}
+/*==================================================================
+ [ Photoslide ]*/
 .wrap{position: relative}
 .slide {
   background-size: cover;
@@ -33,7 +44,7 @@ p.post2 {
 }
 .slide2{background-image: url(pizza.jpg);
 }
-.slide3{background-image: url(kimfood.jpg);}
+
 .slide-content {
   display: flex;
   flex-direction: column;
@@ -45,6 +56,8 @@ p.post2 {
   font-size: 5rem;
   color: #fff;
 }
+/*==================================================================
+ [ Arrow ]*/
 .arrow {
   cursor: pointer;
   position: absolute;
@@ -65,4 +78,23 @@ p.post2 {
   border-color: transparent transparent transparent #fff;
   right: 0;
   margin-right: 10px;
+  top: 420px;
+}
+p.Cate {
+  color: red;
+  font-size: 30px;
+  text-align: center;
+}
+.Categorii {
+  padding: 35px;
+  color: red;
+  margin-left: 30px;
+  padding: 20px;
+}
+.photos1 {
+  float: left;
+  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
 }

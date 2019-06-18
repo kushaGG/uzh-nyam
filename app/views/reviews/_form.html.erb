@@ -11,13 +11,16 @@
     </div>
   <% end %>
 
-  <div id="rating-form">
-    <label>Rating</label>
-  </div>
 
-  <div class="field">
-    <%= form.label :comment %>
+
+
+  <div id="rating-form">
+    <label class="raiting">Rating</label>
+  </div>
+<div class="tinymce">
+  
     <%= form.text_area :comment %>
+
   </div>
 
   <div class="file">
@@ -25,7 +28,7 @@
     <%= form.file_field :photos, multiple: true %>
   </div>
 
-  <div class="actions">
+  <div class="actions4">
     <%= form.submit %>
   </div>
 <% end %>

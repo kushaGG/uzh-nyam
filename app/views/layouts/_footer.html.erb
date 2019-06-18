@@ -1,6 +1,13 @@
 <hr>
+
+      <% if user_signed_in? %>
+        <% if current_user.admin? %>
+           <%= link_to 'Перевірте нові установи', catalogs_path, class:"text-danger" %><br>
+        <% end %>
+      <% end %>
+      <%= link_to "Додати заклад", new_catalog_path, class:"text-danger" %>
+
 <p>Language</p>
 English<br>
 Ukrainian<br>
-<br>    
-<%= link_to 'Want to add your own?', new_catalog_path %>
+<br>

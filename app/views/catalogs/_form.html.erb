@@ -12,22 +12,21 @@
   <% end %>
 <div class="category col-md-6 offset-md-3">
   <div class="forms">
-    <%= form.text_field :title, id: :catalog_title, placeholder:"Title" %>
+    <%= form.text_field :title, id: :catalog_title, placeholder:"Назва" %>
   </div>
 
-  <div class="field">
+  <div class="forms">
     <%= form.label :category_id %>
     <%= form.select :category_id, Category.all.collect{|x| [x.title, x.id]}, id: :catalog_category_id %>
   </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :catalog_location %>
+  <div class="forms">
+    <%= form.text_field :location, id: :catalog_location, placeholder:"Розташування" %>
   </div>
 
   <div class="forms">
 
-    <%= form.text_field :phone_number, id: :catalog_phone_number, placeholder:"Phone number" %>
+    <%= form.text_field :phone_number, id: :catalog_phone_number, placeholder:"Номер телефону" %>
   </div>
 
   <div class="forms">
@@ -74,7 +73,7 @@
 
   <div class="forms">
 
-    <%= form.text_field :description, id: :catalog_description, placeholder:"Description"  %>
+    <%= form.text_field :description, id: :catalog_description, placeholder:"Опис"  %>
   </div>
 
   <div class="forms">
@@ -88,7 +87,7 @@
   </div>
 
   <div class="forms"><br>
-    <%= form.text_field :address, id: :catalog_address, placeholder:"Address" %>
+    <%= form.text_field :address, id: :catalog_address, placeholder:"Адреси" %>
   </div>
 
   <div class="submit">
