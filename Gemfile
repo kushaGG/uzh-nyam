@@ -36,7 +36,7 @@ gem 'jquery-rails'
 #uset registration....
 gem 'devise'
 #user avatar, photos
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 #admin panel
 gem 'activeadmin'
 
